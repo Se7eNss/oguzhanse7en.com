@@ -1,0 +1,270 @@
+.nav{
+   z-index: 29;
+   position:fixed;
+   overflow-x: hidden;
+   top:0;
+   left: 0;
+   width: 70px;
+   height: 100%;
+   background-color: black;
+   @include respond(large){
+       overflow-y:hidden;
+       width: 100%;
+       height: 70px;
+   }
+   
+   .brand{
+       margin-left:0px;
+       width:100%;
+       height:5rem;
+       @include respond(large){
+           height:100%;
+           width: 7rem;
+           margin-left: 0;
+       }@include respond(medium){
+           height:100%;
+           width: 5rem;
+           margin-left: 0;
+       }
+   }
+   .navb{
+       height:5rem;
+       margin-bottom: 120px;
+       @include respond(large){
+           height:100%;
+           width: 7rem;
+           margin-left: 0;
+       }
+       
+   }
+   .nav-link{
+       display: block;
+       position: relative;
+       text-align: center;
+       font-size: 20px;
+       text-decoration: none;
+       color:#009c77 ;
+       margin-top: 10px;
+       @include respond(large){
+          float: left;
+          
+          margin-left:0 ;
+          display: block;
+       }
+       @include respond(medium){
+           margin-top:0;
+           width: 20%;
+           font-size: 23px;
+       }
+       @include respond(small){
+           font-size: 20px;
+           width: 20%;
+           margin-left: 0;
+           font-size: 15px;
+       }
+       
+   }
+   .active,.nav-link:hover{
+       color: rgb(66, 126, 150);
+       
+   }
+   .nav-link i{
+       -webkit-transition: all .3s ease-out;
+       transition: all .3s ease-out
+   }
+   
+   .nav-link:hover i{
+       opacity: 0;
+   }
+   .navl{
+       width: 100%;
+       @include respond(large){
+           opacity: 1;
+           width:50%;
+           height: 100%;
+           margin-left: 18%;
+           float: left;
+         }
+         @include respond(medium){
+           opacity: 0;
+           left:100%;
+           position: fixed;
+           width: 100%;
+           margin-left:0;
+           padding-top:0;
+           margin-top: 65px;
+           height:50px;
+           float: left;
+           background-color: black;
+           overflow: hidden;
+           -webkit-transition: all .3s ease-out;
+           transition: all .3s ease-out
+       }
+       @include respond(small){
+           position: fixed;
+           width: 100%;
+           margin-left:0;
+           padding-top:0;
+           margin-top: 65px;
+           height:50px;
+           float: left;
+           background-color: black;
+           overflow: hidden;
+       }
+   }
+   .nav-link::after{
+       content: '';
+       font-size: 11px;
+       letter-spacing: 2px;
+       left: 2px;
+       position:absolute;
+       bottom: 15px;
+       display: block;
+       width: 100%;
+       text-align: center;
+       opacity: 0;
+       -webkit-transition: all .3s ease-out;
+       transition: all .3s ease-out;
+       @include respond(medium){
+           font-size: 12px;
+       }
+      
+   }
+   .nav-link:hover:after{
+       opacity: 1;
+   }
+   .nav-link:first-child::after{
+       content: 'HOME';
+   }
+   .nav-link:first-child+a::after{
+       content: 'ABOUT';
+   }
+   .nav-link:first-child+a+a::after{
+       content: 'SKILLS';
+   }
+   .nav-link:first-child+a+a+a::after{
+       content: 'WORKS';
+   }
+   .nav-link:first-child+a+a+a+a::after{
+       content: 'CONTACT';
+   }
+ .social{
+     margin-top: 170px;
+     
+     
+     @include respond(large){
+       
+      float: left;
+      position: relative;
+      margin-top: 0;
+     }
+     @include respond(medium){
+       display: none;
+      }
+     ul{
+         margin: 0;
+         padding: 0;
+         text-align: center;
+         list-style-type: none;
+     }
+     ul li a {
+         margin-top: 3px;
+         color:$brandcolor ;
+         font-size:17px;
+        
+     }
+     ul li{
+       @include respond(large){
+           margin-top:20px;
+           margin-left:10px;
+           text-align: center;
+           height: 100%;
+           float: left;
+         }
+     }
+     ul li a{
+       color:$brandcolor ;
+     }
+     ul li :hover{
+        color: $hovercolor;
+     }
+ }
+}
+.mobile{   
+   display: none;
+   z-index: 99;
+   margin-left: 90%;
+   margin-top: 13px;
+   position: fixed;
+   font-size: 30px;
+   color:$brandcolor;
+   float: right;
+   @include respond(medium){
+       display: block;
+      
+     }
+     @include respond(medium){
+        margin-left: 86%;
+       
+      }
+    
+}
+.mobile:hover{
+   color: $hovercolor;
+}
+
+
+
+
+
+
+*-------------------------------html---------------------------
+<div id="nav" class="nav flex-column">
+     <a class="navb" href="index.html"><img class="brand" src="dest/images/se7en1.png" alt=""></a>
+     <div id="s" class="navl">
+        <a class="nav-link active" href="#index"><i class="fas fa-home"></i></a>
+        <a class="nav-link" href="#about"><i  class="far fa-user"></i></a>
+        <a class="nav-link" href="#skill"><i class="fas fa-cog"></i></a>
+        <a class="nav-link" href="#works"><i class="far fa-eye"></i></a>
+        <a class="nav-link" href="#contact"><i class="far fa-envelope"></i></a>
+     </div>
+     <div id="the" class="social">
+        <ul>
+            <li><a href="https://instagram.com/sevenn18" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://instagram.com/sevenn18" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/sevenn18" target="_blank"><i class="fab fa-github"></i></a></li>
+       </ul>
+         
+     </div>
+    </div>
+    <a id="mobile" class="mobile" href="javascript:void(0)" onclick="mob()"><i class="fas fa-bars"></i></a>
+
+
+
+
+
+---------------------------js*********************************************
+//-----------------------------navbar starttt--------------------------
+var header = document.getElementById("nav");
+var btns = header.getElementsByClassName("nav-link");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+
+}
+function mob(){
+     var x =document.getElementById("s");
+    if(document.getElementById("s").style.opacity==0){
+        document.getElementById("s").style.opacity=1;
+        document.getElementById("s").style.left=0;
+        
+    }else{
+        x.style.opacity=0;
+        x.style.left="100%";
+       
+    }
+}
+//-----------------------------navbar end--------------------------

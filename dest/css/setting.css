@@ -1,0 +1,54 @@
+.load {
+  position: absolute;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  background-color: #000;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column; }
+  .load .logo {
+    height: 35%;
+    width: 20%; }
+    .load .logo img {
+      height: 100%;
+      width: 100%; }
+  .load .pro {
+    width: 30%;
+    height: 20%;
+    margin-top: -3rem;
+    text-align: center; }
+    .load .pro .progress {
+      width: 100%;
+      height: 5px;
+      background: whitesmoke; }
+      .load .pro .progress .progress-bar {
+        background: -webkit-linear-gradient(0deg, #009c77 29%, #427e96 68%);
+        background: -moz- oldlinear-gradient(0deg, #009c77 29%, #427e96 68%);
+        background: -o-linear-gradient(0deg, #009c77 29%, #427e96 68%);
+        background: linear-gradient(90deg, #009c77 29%, #427e96 68%);
+        width: 1%;
+        -webkit-transition: 2s;
+           -moz-transition: 2s;
+             -o-transition: 2s;
+                transition: 2s; }
+    .load .pro p {
+      padding: 1rem;
+      color: whitesmoke;
+      background: -webkit-linear-gradient(0deg, #009c77 19%, white 68%);
+      background: -moz- oldlinear-gradient(0deg, #009c77 19%, white 68%);
+      background: -o-linear-gradient(0deg, #009c77 19%, white 68%);
+      background: linear-gradient(90deg, #009c77 19%, white 68%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 15px; }

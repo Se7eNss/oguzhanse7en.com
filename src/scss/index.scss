@@ -1,0 +1,374 @@
+@import 'setting';
+
+.section{
+  position: relative;
+  height: 100%;
+}
+.main{
+.home{
+    position: relative;
+    background-color:black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    @include respond(large){
+        margin-left: 0;
+        flex-direction: column;
+      }
+      .webgl{
+        position: relative;
+        top: 0;
+        left: 0;
+        outline: none;
+        mix-blend-mode: exclusion;
+      }
+    .ml2 {
+        font-weight: 900;
+        font-size: 65px;
+        @include respond(large){
+            text-align: center;
+            font-size: 40px;
+          }
+          @include respond(medium){
+            text-align: center;
+            font-size: 45px;
+          }
+      }
+      
+      .ml2 .letter {
+    //   display:inline-flex;
+        
+        
+        color: aliceblue;
+      }
+      .letter:hover{
+        color: #009c77;
+        font-size: 1.01em;
+        transition:  0.51s;
+        -webkit-text-stroke: 2px rgb(52, 99, 102);
+    }
+    .text{
+        position:absolute;
+        width: 30%; 
+        text-align: center;
+        @include respond(medium){
+            width: 50%;
+            text-align: center;
+          }
+          @include respond(small){
+            width: 50%;
+            text-align: left;
+          }
+          @include respond(large){
+            
+            width: 50%;
+            text-align: center;
+          }
+        .btn{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            color: $brandcolor;
+            border: 2px solid $hovercolor; 
+            @include respond(large){
+                
+                width: 50%;
+              }
+              @include respond(medium){
+                
+                width: 50%;
+              }
+           
+        }
+        .btn:hover{
+                color:$hovercolor;
+                border-color: $brandcolor;
+                border-width: 2.2px;
+        }
+    }
+   p{ 
+      text-align: center;
+       color: #A19FA2;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       font-size: 25px;
+       @include respond(large){
+                
+        text-align:center;
+      }
+       @include respond(medium){
+                
+        text-align:center;
+      }
+      
+   }
+
+
+
+  
+}
+.about{
+  padding-top: 11rem;
+  position: relative;
+  width: 100%;
+  height:750px;
+  background-color: #000;
+  @include respond(large){
+    padding-top: 8rem;
+    height:1050px;
+  }
+.info{
+  @include respond(large){
+    text-align: center;
+  }
+    h1{
+      font-family: $font;
+       font-size:30px;
+       background: linear-gradient(90deg, rgba(0,156,119,1) 19%, rgb(255, 255, 255) 68%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       
+    }
+    p{
+        font-family: $font;
+        font-size:25px ;
+        background: linear-gradient(90deg, rgba(0,156,119,1) 19%, rgb(255, 255, 255) 68%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+    .btn{
+      font-family: $font;
+      // border-radius:30px;
+      border:1px solid $hovercolor;
+      padding: 0.3rem 2rem;
+      color: $brandcolor;
+  }
+  .btn:hover{
+      border-color: $brandcolor;
+      color: $hovercolor;
+  }
+}
+.ben-wrap{
+  background-color: #000;
+   margin-left:35%;
+   
+   @include respond(large){
+     margin-left: 0;
+     margin-left:0;
+   }
+  .bens{  
+    height: 60%;
+    width: 60%;
+    display: none;
+    @include respond(large){
+      display: block;
+      margin-left: 20%;
+      margin-top: 50px;
+    
+    }
+    img{
+      width: 100%;
+
+    }
+
+  }
+  .ben{
+    background-image: url("../../dest/images/ozi.jpg");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    opacity: 0.7;
+    width: 350px;
+    height: 400px;
+   transition: transform 0.1s;
+   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(90%);
+   
+   @include respond(large){
+      
+      margin-top: 3rem;
+      width: 100%;
+      height: 100%;
+      display: none;
+   }
+  
+  
+  }
+  .ben:hover{
+  cursor: pointer;
+  filter: none;
+  
+  }
+}
+
+}
+.about::after{
+    opacity: 0.3;
+  z-index: 0;
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 240px;
+//  background-color: #009c77;
+  border-radius: 50%;
+  transform: translate(240%, -50px);
+//  background: linear-gradient(to  left, #009c77 0%, rgb(66, 126, 150) 90%);
+ background: url("../../dest/images/ay.jpg");
+ background-position: center;
+ background-size: 100% cover;
+ filter:drop-shadow(10px);
+ @include respond(large){display: none
+ }
+}
+.skills{
+  padding-top:11rem;
+  height:750px;
+  width: 100%;
+  background-color: #000; 
+  @include respond(large){
+    height: 1200px;
+  }
+  .col-lg{
+    height: 500px;
+    padding-top: 3rem;
+  
+  
+  .skill{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height:350px ;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.644);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    transition: backdrop-filter 1s ease-in;
+    border-radius:5px ;
+    // box-shadow: 1px 0 10px #009c77 ;
+    
+    justify-content: center;
+    .head{
+      align-self:center;
+      color: #A19FA2;
+      transition: transform  1s ease-in-out;
+    }
+    img{
+      margin-top: -50px;
+      height: 60%;
+      transition: transform  1s ease-in-out;
+    }
+
+    .bilgi{
+      position:absolute;
+      font-size: 17px;
+      color: white;
+      align-self: center;
+       opacity: 0;
+      margin-left: 150px;
+       margin-top: 130px;
+      max-height: 100px;
+     overflow-y: hidden;
+      overflow-x: hidden;
+      transition: opacity 1s, transform  1s ease-in;
+      transition-delay: 0.2s;
+      @include respond(large){
+        align-self: flex-end;
+        margin-left: 0px;
+        width: 95%;
+      }
+    }
+   
+  }
+  }
+  .skill:hover{
+    backdrop-filter:blur(1px);
+    .bilgi{
+       opacity: 1;
+       
+      transform:  translateX(-150px);
+      @include respond(large){
+        transform:  translateY(-70px);
+      }
+      
+    }
+    
+  }
+  
+}
+.skills::before{
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+  //  background-color: #009c77;
+    border-radius: 50%;
+    transform: translate(40px,-20px);
+  //  background: linear-gradient(to  left, #009c77 0%, rgb(66, 126, 150) 90%);
+   background: url("../../dest/images/gece2.jpg");
+   background-position: center;
+   background-size: 100% 100%;
+   @include respond(large){
+    transform: translate(0, -20px);
+   }
+  }
+  .skills::after{
+    
+    z-index: 0;
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+  //  background-color: #009c77;
+    border-radius: 50%;
+    transform: translate(500%, -250px);
+  //  background: linear-gradient(to  left, #009c77 0%, rgb(66, 126, 150) 90%);
+   background: url("../../dest/images/gece.jpg");
+   background-position: center;
+   background-size: 100% 100%;
+   @include respond(large){
+    transform: translate(100px, -190px);
+   }
+  }
+.works{
+  padding-top: 10rem;
+  height:666px;
+  width: 100%;
+  background-color: #000;
+  @include respond(large){
+    height: 700px;
+  }
+  .item{
+    height: 400px;
+    margin: 10px;
+    // filter: blur(1px);
+    padding: 2px;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+    @include respond(large){
+      border: 1px solid rgba(169, 239, 225, 0.7);
+    }
+  }
+ 
+}
+}
+footer{
+  position: relative;
+  background: #000;
+  box-shadow:0 0 10px #009c77 ;
+  a{
+    text-decoration: none;
+    color: #009c77;
+  }
+  a:hover{
+    color: #009c77;
+  }
+  span{
+    color: $hovercolor
+  }
+}
